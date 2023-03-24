@@ -790,6 +790,111 @@
                 app:unselect_drawable="@mipmap/icon_sex_select_woman"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.ansen.shape.AnsenFrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="3dp"
+                app:corners_radius="13dp"
+                app:start_color="#FF00FE"
+                app:center_color="#442DFF"
+                app:end_color="#4CFFFF">
+
+                <com.ansen.shape.AnsenImageView
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/icon_image"
+                    app:corners_radius="12dp"/>
+            </com.ansen.shape.AnsenFrameLayout>
+
+
+            <com.ansen.shape.AnsenFrameLayout
+                android:id="@+id/fl_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:corners_radius="13dp"
+                app:solid_color="#E8E5FF"
+                app:select_stroke_width="3dp"
+                app:select_start_color="#FF00FE"
+                app:select_center_color="#442DFF"
+                app:select_end_color="#4CFFFF">
+
+                <com.ansen.shape.AnsenImageView
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/icon_image"
+                    app:corners_radius="12dp"/>
+            </com.ansen.shape.AnsenFrameLayout>
+
+            <com.ansen.shape.AnsenBorderFrameLayout
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:layout_margin="16dp"
+                android:background="#00442DFF"
+                app:corners_radius="13dp"
+                app:solid_color="#00442DFF"
+                app:stroke_width="3dp"
+                app:start_color="#FF00FE"
+                app:center_color="#442DFF"
+                app:end_color="#4CFFFF"
+                app:border_gradient="true"
+                app:color_orientation="left_right">
+            </com.ansen.shape.AnsenBorderFrameLayout>
+
+
+            <com.ansen.shape.AnsenBorderFrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="#00442DFF"
+                app:corners_radius="13dp"
+                app:solid_color="#00442DFF"
+                app:stroke_width="3dp"
+                app:start_color="#FF00FE"
+                app:center_color="#442DFF"
+                app:end_color="#4CFFFF"
+                app:border_gradient="true"
+                app:color_orientation="left_right">
+
+                <com.ansen.shape.AnsenImageView
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/icon_image"
+                    app:corners_radius="12dp"/>
+            </com.ansen.shape.AnsenBorderFrameLayout>
+
+
+            <com.ansen.shape.AnsenTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="16dp"
+                android:text="Get Inspired"
+                android:textColor="#442DFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:autoLink="all"
+
+                android:drawableStart="@mipmap/icon_sex_select_male"
+                android:drawablePadding="2dp"
+                app:color_orientation="left_right"
+                app:start_color="#FF00FE"
+                app:center_color="#442DFF"
+                app:end_color="#4CFFFF"
+                app:text_gradient="true" />
+
+        </LinearLayout>
+
 <!--        -->
         <com.ansen.shape.AnsenTextView
             android:id="@+id/tv_agreement"

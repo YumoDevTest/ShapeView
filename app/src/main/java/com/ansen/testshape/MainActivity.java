@@ -3,6 +3,7 @@ package com.ansen.testshape;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.text.style.URLSpan;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.aiv_one).setOnClickListener(this);
         findViewById(R.id.tv_follow).setOnClickListener(this);
         findViewById(R.id.tv_age_three).setOnClickListener(this);
+        findViewById(R.id.fl_selected).setOnClickListener(this);
     }
 
     @Override
@@ -149,6 +152,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tvSelectSex.setSelected(!tvSelectSex.isSelected());
         }else if(v.getId()==R.id.tv_agreement){
             v.setSelected(!v.isSelected());
+        }else if (v.getId() == R.id.fl_selected){
+            boolean isSelect = !v.isSelected();
+            if (isSelect){
+                int padding = (int)dp2px(3f);
+                v.setPadding(padding,padding,padding,padding);
+            }else {
+                v.setPadding(0,0,0,0);
+            }
+            v.setSelected(isSelect);
         }
     }
 
@@ -190,5 +202,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         };
 //        Log.i("url:" + urlSpan.getURL());
         clickableHtmlBuilder.setSpan(clickableSpan, start, end, flags);
+    }
+
+    public static float dp2px(float dp) {
+        return TypedValue.applyDimension(1, dp, Resources.getSystem().getDisplayMetrics());
     }
 }

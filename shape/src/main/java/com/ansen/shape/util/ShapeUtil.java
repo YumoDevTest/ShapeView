@@ -1,6 +1,7 @@
 package com.ansen.shape.util;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -9,6 +10,7 @@ import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 
 import com.ansen.shape.R;
@@ -167,6 +169,8 @@ public class ShapeUtil{
             }
         }
 
+
+
         gradientDrawable.setShape(shapeAttribute.shape);//设置形状(矩形、椭圆形、一条线、环形)
 
         if (shapeAttribute.strokeDirection != 0) {
@@ -249,5 +253,9 @@ public class ShapeUtil{
             rightStrokeWidth = 0;
         }
         layerDrawable.setLayerInset(0, liftStrokeWidth, topStrokeWidth, rightStrokeWidth, bottomStrokeWidth);
+    }
+
+    public static float dp2px(float dp) {
+        return TypedValue.applyDimension(1, dp, Resources.getSystem().getDisplayMetrics());
     }
 }
